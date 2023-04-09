@@ -1,1 +1,571 @@
+/* navbar */
 
+html,
+body {
+    height: 100%;
+}
+
+button {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.card_wrapp {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.conetent_nav {
+    width: 100%;
+    height: 56px;
+    padding: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #E9E9E9;
+    box-sizing: border-box;
+}
+
+.prev_arrow {
+    width: 12px;
+    height: 12px;
+}
+
+.prev_arrow img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.prev_title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: -0.4px;
+    color: #202020;
+}
+
+.card_list {
+    width: 100%;
+    height: calc(100% - 56px);
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.card_list .card_registration_title {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.4px;
+    color: #202020;
+}
+
+.card_registration {
+    margin-top: 25px;
+    padding: 0 10px;
+}
+
+.registration_wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.registration_wrap li:nth-child(1) {
+    width: 25%;
+}
+
+.registration_wrap li:nth-child(2) {
+    width: 50%;
+}
+
+.registration_wrap li:nth-child(3) {
+    width: 25%;
+}
+
+.registration_wrap:last-child {
+    margin-bottom: 0;
+}
+
+.registration_wrap .card_name {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.4px;
+    color: #000000;
+}
+
+.registration_wrap .card_number {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.4px;
+    color: #000000;
+}
+
+.registration_delete .delee_btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.card_delet_btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    color: #E52E2E;
+    margin-left: 5px;
+}
+
+
+.card_plus_btn {
+    width: 100%;
+    padding: 16px 16px 32px;
+    box-sizing: border-box;
+    border-top: 1px solid #EEEEEE;
+    position: relative;
+    transform: translateY(-100%);
+}
+
+.card_plus_btn .add_btn {
+    width: 100%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E52E2E;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.4px;
+    color: #FFFFFF;
+}
+
+
+
+
+
+/* modal */
+.modal.delet_modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Modal Content/Box */
+.delet_modal .modal-content {
+    background-color: #fefefe;
+    position: absolute;
+    padding: 0 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 167px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+.modal_wrap {
+    padding: 35px 0 25px;
+}
+
+
+.delet_title {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: -0.4px;
+    color: #202020;
+    width: 100%;
+    margin-bottom: 36px;
+}
+
+.delet_button_contain {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.modal_btn {
+    width: 50%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.modal_cancle_btn {
+    background: #F5F5F5;
+    color: #919191;
+    margin-right: 8px;
+}
+
+.modal_submit_btn {
+    background: #E52E2E;
+    color: #fff;
+}
+
+
+/* 카드등록 modal */
+
+.modal.registration_modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0 27px;
+    box-sizing: border-box;
+}
+
+/* Modal Content/Box */
+.registration_modal .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-height: 800px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-sizing: border-box;
+    padding: 20px 16px;
+}
+
+.registration_modal .modal_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 12px;
+}
+
+.registration_modal .modal_head .head_title {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.4px;
+    color: #202020;
+}
+
+.registration_modal .modal_wrap {
+    padding: 15px 0;
+}
+
+.personal_info {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.personal_info:last-child {
+    margin-bottom: 0;
+}
+
+.registration_modal .personal_info .input_title {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.4px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.registration_modal .personal_info input {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: -0.4px;
+color: #202020;
+}
+
+.registration_modal .personal_info input::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.4px;
+    color: #BEBEBE;
+}
+
+.card_number_input {
+    display: flex;
+    align-items: center;
+}
+
+.card_number_input input {
+    height: 45px;
+    width: calc(100% / 4);
+    margin-right: 9px;
+}
+
+.card_number_input input:last-child {
+    margin-right: 0;
+}
+
+.card_day {
+    display: flex;
+    align-items: center;
+
+}
+
+.card_day .card_number_month {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+    width: 92px;
+    height: 45px;
+    padding: 0 14px;
+}
+
+.card_day .card_number_month:first-child {
+    margin-right: 7px;
+}
+
+.card_day .card_number_month input {
+    border: none;
+    padding: 0;
+    width: 52px;
+    text-align: center;
+    font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: -0.4px;
+color: #202020;
+}
+
+.card_day .card_number_month input:focus {
+    outline: none;
+}
+
+.card_number_month label {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.4px;
+    color: #BEBEBE;
+}
+
+.registration_modal input:focus {
+    outline: 1px solid #000;
+}
+
+.card_number_input {
+    display: flex;
+    align-items: center;
+}
+
+.card_number_input input {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+}
+
+.card_password_input{
+    display: flex;
+}
+
+.card_password_input input{
+    width: calc(100% / 6);
+    height: 34px;
+    margin-right: 6px;
+    font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+text-align: center;
+letter-spacing: -0.4px;
+color: #202020;
+}
+
+.card_password_input input:last-child{
+    margin-right: 0;
+}
+
+.number_keypad {
+    margin-top: 15px;
+}
+
+.number_keypad_list {
+    display: flex;
+    align-items: center;
+}
+
+.number_keypad_list:first-child {
+    margin-bottom: 5px;
+}
+
+.number_keypad_list .keypad_number {
+    width: calc(100% / 6);
+    height: 30px;
+    background: #EEEEEE;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: -0.4px;
+    color: #666666;
+    margin-right: 5px;
+}
+
+
+
+.number_keypad_list .keypad_number:last-child {
+    margin-right: 0;
+}
+
+
+.personal_input {
+    margin-bottom: 20px;
+}
+
+.personal_chk{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.personal_chk input[type=checkbox] {
+    position: relative;
+    border: 1px solid #EEEEEE;
+    border-radius: 3px;
+    background: none;
+    cursor: pointer;
+    line-height: 0;
+    margin: 0 .6em 0 0;
+    outline: 0;
+    padding: 0 !important;
+    vertical-align: text-top;
+    height: 20px;
+    width: 20px;
+    -webkit-appearance: none;
+    opacity: .5;
+}
+
+.personal_chk input[type=checkbox]:hover {
+    opacity: 1;
+}
+
+.personal_chk input[type=checkbox]:checked {
+    background-color: #E52E2E;
+    opacity: 1;
+}
+
+.personal_chk input[type=checkbox]:before {
+    content: '';
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 4px;
+    height: 10px;
+    border: solid #FFF;
+    border-width: 0 2px 2px 0;
+    margin: -1px -1px 0 -1px;
+    transform: rotate(45deg) translate(-50%, -50%);
+    z-index: 2;
+}
+
+.personal_chk .personal_check_wrap label{
+    font-weight: 400;
+font-size: 14px;
+letter-spacing: -0.4px;
+color: #666666;
+}
+
+.more_wrap{
+    display: flex;
+    align-items: center;
+}
+
+.more_wrap p{
+    font-weight: 400;
+font-size: 14px;
+letter-spacing: -0.4px;
+color: #BEBEBE;
+margin-right: 7px;
+}
+
+.more_content{
+    display: none;
+    width: 100%;
+    padding: 0 7px;
+    height: 180px;
+    border: 1px solid #EEEEEE;
+border-radius: 4px;
+box-sizing: border-box;
+overflow: hidden;
+}
+
+.more_content.active{
+    display: block;
+}
+
+.more_header{
+    padding:6px 0;
+    font-weight: 400;
+font-size: 12px;
+letter-spacing: -0.4px;
+color: #202020;
+border-bottom: 1px solid #EEEEEE;
+}
+
+.more_check_content{
+    padding: 5px 7px 9px;
+font-size: 12px;
+line-height: 20px;
+letter-spacing: -0.4px;
+color: #202020;
+height: 85%;
+overflow: auto;
+}
+
+.registration_btn{
+    width: 100%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E52E2E;
+border-radius: 4px;
+font-weight: 500;
+font-size: 16px;
+letter-spacing: -0.4px;
+color: #FFFFFF;
+margin-top: 10px;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,15 +10,18 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    
+
     <div class="card_wrapp">
         <div class="conetent_nav">
-            <div class="prev_arrow"></div>
+            <a href="javascript:void(0)" class="prev_arrow">
+                <img src="./img/back_arrow.png" alt="icon">
+            </a>
             <p class="prev_title">결제 카드 관리</p>
         </div>
 
-        <div class="care_list">
+        <div class="card_list">
             <h2 class="card_registration_title">
                 등록된 카드
             </h2>
@@ -28,49 +32,324 @@
                 <!-- 등록된 카드가 존재할때 -->
                 <ul class="registration_wrap">
                     <li class="registration_card_img">
-                        <img src="" alt="card">
+                        <img src="./img/card_img.png" alt="card">
                     </li>
                     <li class="registration_card_info">
                         <p class="card_name">현대카드 M2 BOOST</p>
                         <p class="card_number">************9877</p>
                     </li>
                     <li class="registration_delete">
-                        <img src="">
-                        <p class="card_delet_btn">삭제</p>
+                        <div type="button" class="delee_btn view_more">
+                            <img src="./img/delete_btn.png" alt="btn">
+                            <p class="card_delet_btn">삭제</p>
+                        </div>
                     </li>
                 </ul>
 
                 <ul class="registration_wrap">
                     <li class="registration_card_img">
-                        <img src="" alt="card">
+                        <img src="./img/card_img.png" alt="card">
                     </li>
                     <li class="registration_card_info">
                         <p class="card_name">현대카드 M2 BOOST</p>
                         <p class="card_number">************9877</p>
                     </li>
                     <li class="registration_delete">
-                        <img src="">
-                        <p class="card_delet_btn">삭제</p>
+                        <div type="button" class="delee_btn view_more">
+                            <img src="./img/delete_btn.png" alt="btn">
+                            <p class="card_delet_btn">삭제</p>
+                        </div>
                     </li>
                 </ul>
 
                 <ul class="registration_wrap">
                     <li class="registration_card_img">
-                        <img src="" alt="card">
+                        <img src="./img/card_img.png" alt="card">
                     </li>
                     <li class="registration_card_info">
                         <p class="card_name">현대카드 M2 BOOST</p>
                         <p class="card_number">************9877</p>
                     </li>
                     <li class="registration_delete">
-                        <img src="">
-                        <p class="card_delet_btn">삭제</p>
+                        <div type="button" class="delee_btn view_more">
+                            <img src="./img/delete_btn.png" alt="btn">
+                            <p class="card_delet_btn">삭제</p>
+                        </div>
                     </li>
                 </ul>
             </div>
 
         </div>
+
+        <div class="card_plus_btn">
+            <button type="button" class="add_btn view_more">
+                결제 카드 등록
+            </button>
+        </div>
     </div>
 
+
+    <!-- card delet modal -->
+    <div class="modal delet_modal">
+
+        <!-- 첫 번째 Modal의 내용 -->
+        <div class="modal-content">
+            <div class="modal_wrap">
+                <h2 class="delet_title">선택한 결제수단을 삭제하시겠습니까?</h2>
+                <div class="delet_button_contain">
+                    <button type="button" class="close modal_cancle_btn modal_btn">
+                        취소
+                    </button>
+                    <button type="button" class="modal_submit_btn modal_btn">
+                        확인
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal delet_modal">
+
+        <!-- 첫 번째 Modal의 내용 -->
+        <div class="modal-content">
+            <div class="modal_wrap">
+                <h2 class="delet_title">선택한 결제수단을 삭제하시겠습니까?</h2>
+                <div class="delet_button_contain">
+                    <button type="button" class="close modal_cancle_btn modal_btn">
+                        취소
+                    </button>
+                    <button type="button" class="modal_submit_btn modal_btn">
+                        확인
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal delet_modal">
+
+        <!-- 첫 번째 Modal의 내용 -->
+        <div class="modal-content">
+            <div class="modal_wrap">
+                <h2 class="delet_title">선택한 결제수단을 삭제하시겠습니까?</h2>
+                <div class="delet_button_contain">
+                    <button type="button" class="close modal_cancle_btn modal_btn">
+                        취소
+                    </button>
+                    <button type="button" class="modal_submit_btn modal_btn">
+                        확인
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- card add modal -->
+    <div class="modal registration_modal">
+
+        <div class="modal-content">
+            <div class="modal_head">
+                <div class="head_title">결제카드 등록</div>
+                <img src="./img/popup_close.png" class="close" alt="close">
+
+            </div>
+            <div class="modal_wrap">
+                <div class="personal_input">
+                    <div class="personal_info">
+                        <div class="input_title">생년월일</div>
+                        <input type="number" placeholder="숫자 6자리 (ex. 910101)" maxlength="6" oninput="numberMaxLength(this);"/>
+                    </div>
+                    <div class="personal_info">
+                        <div class="input_title">카드번호</div>
+                        <div class="card_number_input">
+                            <input type="number" maxlength="4" oninput="numberMaxLength(this);"/>
+                            <input type="number" maxlength="4" oninput="numberMaxLength(this);"/>
+                            <input type="number" maxlength="4" oninput="numberMaxLength(this);"/>
+                            <input type="number" maxlength="4" oninput="numberMaxLength(this);"/>
+                        </div>
+                    </div>
+                    <div class="personal_info">
+                        <div class="input_title">카드 만료일</div>
+                        <div class="card_day">
+                            <div class="card_number_month">
+                                <input type="number" placeholder="01" maxlength="2" oninput="numberMaxLength(this);"/>
+                                <label>월</label>
+                            </div>
+
+
+                            <div class="card_number_month">
+                                <input type="number" placeholder="2300" maxlength="4" oninput="numberMaxLength(this);"/>
+                                <label>년</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personal_info">
+                        <div class="input_title">결제 비밀번호</div>
+                        <div class="card_password_input">
+                            <input type="password">
+                            <input type="password">
+                            <input type="password">
+                            <input type="password">
+                            <input type="password">
+                            <input type="password">
+                        </div>
+                        <div class="number_keypad">
+                            <div class="number_keypad_list">
+                                <div class="keypad_number">1</div>
+                                <div class="keypad_number">2</div>
+                                <div class="keypad_number">3</div>
+                                <div class="keypad_number">4</div>
+                                <div class="keypad_number">5</div>
+                                <div class="keypad_number">6</div>
+                            </div>
+                            <div class="number_keypad_list">
+                                <div class="keypad_number">7</div>
+                                <div class="keypad_number">8</div>
+                                <div class="keypad_number">9</div>
+                                <div class="keypad_number">0</div>
+                                <div class="number_delete">
+                                    <img src="./img/number_delete.png">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="personal_chk">
+                    <div class="personal_check_wrap">
+                        <input id="check1" type="checkbox" checked>
+                        <label for="check1">자동 승인 동의</label>
+                    </div>
+                    <div class="more_wrap">
+                        <p>약관보기</p>
+                        <img src="./img/down_arrow.png">
+                    </div>
+
+                </div>
+                <div class="more_content">
+                    <div class="more_header">
+                        금융거래정보 제공동의서
+                    </div>
+                    <div class="more_check_content">
+                        <p>1. “금융실명거래 및 비밀조항에 관한 법률"의 규정에 따라, 이용자는 본 신청과 관련하여 다음 금융거래정보를 상기 청구기관(청구기관의 결제 대행업체를 포함함)에
+                            제공하는 것에 동의합니다.
+                            <br>- 거래 카드사(은행)명
+                            <br>- 카드번호
+                        </p>
+                        <p>
+                            2. 상기 1의 이용자 동의는 이용자가 신용카드 등 자동 승인을 신규 신청하는 때로부터 해지 신청할 때 까지 유효합니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="delet_button_contain">
+                    <button type="button" class="registration_btn">
+                        등록완료
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/jquery-3.6.4.min.js"></script>
+
+    <script>
+        // Modal을 가져옵니다.
+        var modals = document.getElementsByClassName("modal");
+        // Modal을 띄우는 클래스 이름을 가져옵니다.
+        var btns = document.getElementsByClassName("view_more");
+        // Modal을 닫는 close 클래스를 가져옵니다.
+        var spanes = document.getElementsByClassName("close");
+        var funcs = [];
+
+        // Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
+        function Modal(num) {
+            return function () {
+                // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
+                btns[num].onclick = function () {
+                    modals[num].style.display = "block";
+                    console.log(num);
+                };
+
+                // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
+                spanes[num].onclick = function () {
+                    modals[num].style.display = "none";
+                };
+            };
+        }
+
+        // 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의합니다.
+        for (var i = 0; i < btns.length; i++) {
+            funcs[i] = Modal(i);
+        }
+
+        // 원하는 Modal 수만큼 funcs 함수를 호출합니다.
+        for (var j = 0; j < btns.length; j++) {
+            funcs[j]();
+        }
+
+
+        // Modal 영역 밖을 클릭하면 Modal을 닫습니다.
+        window.onclick = function (event) {
+            if (event.target.className == "modal") {
+                event.target.style.display = "none";
+            }
+        };
+
+
+        // 약과동의
+        const moreBtn = document.querySelector('.more_wrap');
+        const moreContent = document.querySelector('.more_content');
+
+        moreBtn.addEventListener('click', () => {
+            if (moreContent.style.display === 'none') {
+                moreContent.style.display = 'block';
+            } else {
+                moreContent.style.display = 'none';
+            }
+        });
+
+
+
+        // keypad 
+        const keypadNumbers = document.querySelectorAll('.keypad_number');
+        const cardNumberInputs = document.querySelectorAll('.card_password_input input');
+
+        keypadNumbers.forEach((keypadNumber) => {
+            keypadNumber.addEventListener('click', () => {
+                const currentInput = Array.from(cardNumberInputs).find((input) => !input.value);
+                if (currentInput) {
+                    currentInput.value = keypadNumber.textContent;
+                    currentInput.nextElementSibling.focus();
+                }
+            });
+        });
+
+        const numberDelete = document.querySelector('.number_delete');
+
+        numberDelete.addEventListener('click', () => {
+            const filledInputs = Array.from(cardNumberInputs).filter((input) => input.value);
+            if (filledInputs.length > 0) {
+                const lastFilledInput = filledInputs[filledInputs.length - 1];
+                lastFilledInput.value = '';
+                lastFilledInput.focus();
+            }
+        });
+
+
+        function numberMaxLength(e) {
+
+            if (e.value.length > e.maxLength) {
+
+                e.value = e.value.slice(0, e.maxLength);
+
+            }
+
+        }
+
+    </script>
 </body>
+
 </html>
